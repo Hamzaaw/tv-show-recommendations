@@ -5,7 +5,7 @@ const editorsChoiceShows = [
     { id: 2, name: 'Sherlock' },
     { id: 3, name: 'Silicon Valley' },
     { id: 4, name: 'Breaking Bad' },
-    { id: 5, name: 'FallOut' },
+    { id: 5, name: 'Fallout' },
     { id: 6, name: 'Parks and Recreation' },
     { id: 7, name: 'The Office' },
     { id: 8, name: 'One Piece' },
@@ -19,7 +19,8 @@ const editorsChoiceShows = [
     { id: 16, name: 'New Girl' },
     { id: 17, name: 'Friends' },
     { id: 18, name: 'How I Met Your Mother' },
-    { id: 19, name: 'Two and a Half Men' }
+    { id: 19, name: 'Two and a Half Men' },
+    { id: 20, name: 'The Big Bang Theory' }
   ];
   
   export default editorsChoiceShows;
