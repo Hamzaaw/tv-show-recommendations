@@ -3,7 +3,7 @@ import './App.css';
 import GenreSelection from './components/GenreSelection';
 import { fetchShowsByGenre, fetchShowDetails } from './api';
 import editorsChoiceShows from './editorsChoiceShows';
-
+import { Analytics } from "@vercel/analytics/react"
 const buttonTexts = [
   "this ain't it chief",
   'Hard pass',
