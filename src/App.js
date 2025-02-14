@@ -4,6 +4,7 @@ import GenreSelection from './components/GenreSelection';
 import { fetchShowsByGenre, fetchShowDetails } from './api';
 import editorsChoiceShows from './editorsChoiceShows';
 import { Analytics } from '@vercel/analytics/react';
+import BackButton from './components/BackButton';  // Import Back Button
 
 const buttonTexts = [
   "this ain't it chief",
@@ -54,6 +55,12 @@ const App = () => {
     setButtonText(getRandomButtonText()); // Update button text
   };
 
+  const handleBackToHome = () => {
+    setGenre(''); // Reset genre to go back to the selection screen
+    setShows([]); // Clear current shows
+    setCurrentShowIndex(0);
+  };
+
   useEffect(() => {
     if (shows.length > 0) {
       setCurrentShowIndex(0);
@@ -80,6 +87,10 @@ const App = () => {
       <header className="App-header">
         <h1>TV Show Recommendations</h1>
       </header>
+      
+      {/* Show Back Button Only When a Genre is Selected */}
+      {genre && <BackButton onBack={handleBackToHome} />}
+
       {!genre ? (
         <GenreSelection onSelectGenre={handleGenreSelect} />
       ) : (
